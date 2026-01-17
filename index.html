@@ -11,20 +11,38 @@
   <div class="controls">
     <label>
       Barn Width (ft):
-      <input type="number" id="barnWidth" value="10">
+      <input type="number" id="barnWidth" value="10" min="1">
     </label>
     <label>
       Barn Height (ft):
-      <input type="number" id="barnHeight" value="10">
+      <input type="number" id="barnHeight" value="10" min="1">
     </label>
     <label>
       Rope Length (ft):
-      <input type="number" id="ropeLength" value="100">
+      <input type="number" id="ropeLength" value="100" min="1">
     </label>
     <button onclick="startSimulation()">Simulate</button>
+    <button onclick="toggleTrace()">Toggle Trace</button>
+    <button onclick="clearTrace()">Clear Trace</button>
+  </div>
+
+  <div class="controls">
+    <label>
+      Animation Speed:
+      <input type="range" id="speedSlider" min="1" max="100" value="50">
+    </label>
+    <label>
+      Sample Points:
+      <input type="number" id="sampleCount" value="100000" min="10000" max="500000" step="10000">
+    </label>
+    <label>
+      <input type="checkbox" id="showSectors" checked>
+      Show Sectors
+    </label>
   </div>
 
   <p id="areaOutput">Area: —</p>
+  <p id="statsOutput"></p>
 
   <canvas id="canvas" width="600" height="600"></canvas>
 
