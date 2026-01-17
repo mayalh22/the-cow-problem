@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cow grazing simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Cow Grazing Area Simulator</h1>
+
+  <div class="controls">
+    <label>
+      Barn Width (ft):
+      <input type="number" id="barnWidth" value="10">
+    </label>
+    <label>
+      Barn Height (ft):
+      <input type="number" id="barnHeight" value="10">
+    </label>
+    <label>
+      Rope Length (ft):
+      <input type="number" id="ropeLength" value="100">
+    </label>
+    <button onclick="startSimulation()">Simulate</button>
+  </div>
+
+  <p id="areaOutput">Area: —</p>
+
+  <canvas id="canvas" width="600" height="600"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
